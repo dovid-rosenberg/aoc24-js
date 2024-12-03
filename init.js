@@ -15,7 +15,7 @@ export default async function ({
 
   rl.on('line', lineCb)
   rl.on("close", () => {
-    solve1();
-    solve2();
+    if (solve1) solve1();
+    if (solve2) solve2();
   });
 }
